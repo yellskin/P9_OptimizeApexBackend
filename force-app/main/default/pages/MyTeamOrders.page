@@ -1,0 +1,13 @@
+<apex:page lightningStylesheets="true" standardController="Account" extensions="MyTeamOrdersController" >
+    <apex:pageBlock >
+        <h2>Rendement par commercial</h2>
+        <apex:pageBlockTable value="{!SumOders}" var="p" title="Rendement par commercial" columns="2" align="center">
+            <apex:column value="{!p}">
+                <apex:facet name="header">Prénom et nom</apex:facet>
+            </apex:column>
+            <apex:column value="{!SumOders[p]}">
+                <apex:facet name="header">Somme des commandes</apex:facet>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
